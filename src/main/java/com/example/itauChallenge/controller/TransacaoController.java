@@ -30,6 +30,11 @@ public class TransacaoController {
         return new ResponseEntity<>("",HttpStatus.CREATED);
     }
 
+    @DeleteMapping(value = "/transacao")
+    public ResponseEntity<String> Delete(){
+        db.clear();
+        return new ResponseEntity<>("",HttpStatus.OK);
+    }
 
 
 }
