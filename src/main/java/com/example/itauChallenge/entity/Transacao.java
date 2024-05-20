@@ -5,21 +5,23 @@ import java.time.OffsetDateTime;
 
 
 public class Transacao {
-    Float valor;
+    Double valor;
     OffsetDateTime dataHora;
-    public Transacao(Float valor, OffsetDateTime dataHora) {
+    OffsetDateTime createdDate;
+    public Transacao(Double valor, OffsetDateTime dataHora, OffsetDateTime createdDate) {
         this.valor = valor;
         this.dataHora = dataHora;
+        this.createdDate = createdDate;
     }
     public Transacao(){
 
     }
 
-    public Float getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(Float valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
@@ -29,5 +31,13 @@ public class Transacao {
 
     public void setDataHora(OffsetDateTime dataHora) {
         this.dataHora = dataHora;
+    }
+
+    public OffsetDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(OffsetDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 }
